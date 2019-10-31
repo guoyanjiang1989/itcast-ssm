@@ -1,0 +1,6 @@
+# Project exclude paths
+/itcast-ssm-dao/target/
+/itcast-ssm-domain/target/
+/itcast-ssm-service/target/
+/itcast-ssm-utils/target/
+/itcast-ssm-web/target/
