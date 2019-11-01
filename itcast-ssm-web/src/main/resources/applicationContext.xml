@@ -21,17 +21,16 @@
     <!-- 配置连接池 -->
     <context:property-placeholder location="classpath:db.properties"/>
     <bean id="DataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
-        <property name="driverClass" value="${jdbc.driver}"/>
-        <property name="jdbcUrl" value="${jdbc.url}"/>
-        <property name="user" value="${jdbc.username}"/>
-        <property name="password" value="${jdbc.password}"/>
-        <property name="maxPoolSize" value="10"/>
-        <property name="minPoolSize" value="5"/>
+        <property name="driverClass" value="${jdbc1.driver}"/>
+        <property name="jdbcUrl" value="${jdbc1.url}"/>
+        <property name="user" value="${jdbc1.username}"/>
+        <property name="password" value="${jdbc1.password}"/>
     </bean>
 
     <!-- 把交给IOC管理 SqlSessionFactory -->
     <bean class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="DataSource"/>
+        <property name="typeAliasesPackage" value="com.itheima.ssm.domain"/>
     </bean>
 
     <!-- 扫描dao接口 -->
