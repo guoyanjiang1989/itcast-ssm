@@ -4,6 +4,6 @@
     <title>主页</title>
 </head>
 <body>
-    <jsp:forward page="/pages/main.jsp"></jsp:forward>
+    <jsp:forward page="pages/main.jsp"></jsp:forward>
 </body>
 </html>

@@ -8,4 +8,5 @@ public interface IProductService {
 
     List<Product> findAll() throws Exception;
 
+    void save() throws Exception;
 }
