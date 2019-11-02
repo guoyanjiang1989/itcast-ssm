@@ -1,15 +1,17 @@
 package com.itheima.ssm.domain;
 
 import com.itheima.ssm.utils.DateUtils;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
 public class Product {
 
-    private String id;//主键
+    private Integer id;//主键
     private String productNum;//产品编号 唯一
     private String productName;//产品名称
     private String cityName;//城市
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
     private Date departureTime;//出发时间
     private String departureTimeStr;
     private Double productPrice;//产品价格
@@ -20,7 +22,7 @@ public class Product {
     public Product() {
     }
 
-    public Product(String id, String productNum, String productName, String cityName, Date departureTime, String departureTimeStr, Double productPrice, String productDesc, Integer productStatus, String productStatusStr) {
+    public Product(Integer id, String productNum, String productName, String cityName, Date departureTime, String departureTimeStr, Double productPrice, String productDesc, Integer productStatus, String productStatusStr) {
         this.id = id;
         this.productNum = productNum;
         this.productName = productName;
@@ -33,11 +35,11 @@ public class Product {
         this.productStatusStr = productStatusStr;
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

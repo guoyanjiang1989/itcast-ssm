@@ -21,7 +21,7 @@ public class ProductServiceImpl implements IProductService {
     }
 
     @Override
-    public void save() throws Exception {
-        productDao.save();
+    public void save(Product product) {
+        productDao.save(product);
     }
 }

@@ -17,8 +17,8 @@ public class ProductController {
     private IProductService productService;
 
     @RequestMapping("/save.do")
-    public String save() throws Exception {
-        productService.save();
+    public String save(Product product){
+        productService.save(product);
         return "redirect:findAll.do";
     }
 

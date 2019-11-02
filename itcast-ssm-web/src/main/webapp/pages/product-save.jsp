@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
 
@@ -125,335 +125,11 @@
 <div class="wrapper">
 
     <!-- 页面头部 -->
-    <header class="main-header">
-
-
-        <!-- Logo -->
-        <a href="all-admin-index.html" class="logo">
-            <!-- mini logo for sidebar mini 50x50 pixels -->
-            <span class="logo-mini"><b>数据</b></span>
-            <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><b>数据</b>后台管理</span>
-        </a>
-
-
-        <!-- Header Navbar: style can be found in header.less -->
-        <nav class="navbar navbar-static-top">
-            <!-- Sidebar toggle button-->
-            <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-                <span class="sr-only">Toggle navigation</span>
-            </a>
-
-            <div class="navbar-custom-menu">
-                <ul class="nav navbar-nav">
-                    <!-- Messages: style can be found in dropdown.less-->
-                    <li class="dropdown messages-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-envelope-o"></i>
-                            <span class="label label-success">4</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="header">你有4个邮件</li>
-                            <li>
-                                <!-- inner menu: contains the actual data -->
-                                <ul class="menu">
-                                    <li>
-                                        <!-- start message -->
-                                        <a href="#">
-                                            <div class="pull-left">
-                                                <img src="../img/user2-160x160.jpg" class="img-circle" alt="User Image">
-                                            </div>
-                                            <h4>
-                                                系统消息
-                                                <small><i class="fa fa-clock-o"></i> 5 分钟前</small>
-                                            </h4>
-                                            <p>欢迎登录系统?</p>
-                                        </a>
-                                    </li>
-                                    <!-- end message -->
-                                    <li>
-                                        <a href="#">
-                                            <div class="pull-left">
-                                                <img src="../img/user3-128x128.jpg" class="img-circle" alt="User Image">
-                                            </div>
-                                            <h4>
-                                                团队消息
-                                                <small><i class="fa fa-clock-o"></i> 2 小时前</small>
-                                            </h4>
-                                            <p>你有新的任务了</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <div class="pull-left">
-                                                <img src="../img/user4-128x128.jpg" class="img-circle" alt="User Image">
-                                            </div>
-                                            <h4>
-                                                Developers
-                                                <small><i class="fa fa-clock-o"></i> Today</small>
-                                            </h4>
-                                            <p>Why not buy a new awesome theme?</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <div class="pull-left">
-                                                <img src="../img/user3-128x128.jpg" class="img-circle" alt="User Image">
-                                            </div>
-                                            <h4>
-                                                Sales Department
-                                                <small><i class="fa fa-clock-o"></i> Yesterday</small>
-                                            </h4>
-                                            <p>Why not buy a new awesome theme?</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <div class="pull-left">
-                                                <img src="../img/user4-128x128.jpg" class="img-circle" alt="User Image">
-                                            </div>
-                                            <h4>
-                                                Reviewers
-                                                <small><i class="fa fa-clock-o"></i> 2 days</small>
-                                            </h4>
-                                            <p>Why not buy a new awesome theme?</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="footer"><a href="#">See All Messages</a></li>
-                        </ul>
-                    </li>
-                    <!-- Notifications: style can be found in dropdown.less -->
-                    <li class="dropdown notifications-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-bell-o"></i>
-                            <span class="label label-warning">10</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="header">你有10个新消息</li>
-                            <li>
-                                <!-- inner menu: contains the actual data -->
-                                <ul class="menu">
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-users text-aqua"></i> 5 new members joined today
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-warning text-yellow"></i> Very long description here that may not
-                                            fit into the page and may cause design problems
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-users text-red"></i> 5 new members joined
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-shopping-cart text-green"></i> 25 sales made
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-user text-red"></i> You changed your username
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="footer"><a href="#">View all</a></li>
-                        </ul>
-                    </li>
-                    <!-- Tasks: style can be found in dropdown.less -->
-                    <li class="dropdown tasks-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-flag-o"></i>
-                            <span class="label label-danger">9</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="header">你有9个新任务</li>
-                            <li>
-                                <!-- inner menu: contains the actual data -->
-                                <ul class="menu">
-                                    <li>
-                                        <!-- Task item -->
-                                        <a href="#">
-                                            <h3>
-                                                Design some buttons
-                                                <small class="pull-right">20%</small>
-                                            </h3>
-                                            <div class="progress xs">
-                                                <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                    <span class="sr-only">20% Complete</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <!-- end task item -->
-                                    <li>
-                                        <!-- Task item -->
-                                        <a href="#">
-                                            <h3>
-                                                Create a nice theme
-                                                <small class="pull-right">40%</small>
-                                            </h3>
-                                            <div class="progress xs">
-                                                <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                    <span class="sr-only">40% Complete</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <!-- end task item -->
-                                    <li>
-                                        <!-- Task item -->
-                                        <a href="#">
-                                            <h3>
-                                                Some task I need to do
-                                                <small class="pull-right">60%</small>
-                                            </h3>
-                                            <div class="progress xs">
-                                                <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                    <span class="sr-only">60% Complete</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <!-- end task item -->
-                                    <li>
-                                        <!-- Task item -->
-                                        <a href="#">
-                                            <h3>
-                                                Make beautiful transitions
-                                                <small class="pull-right">80%</small>
-                                            </h3>
-                                            <div class="progress xs">
-                                                <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                    <span class="sr-only">80% Complete</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <!-- end task item -->
-                                </ul>
-                            </li>
-                            <li class="footer">
-                                <a href="#">View all tasks</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- User Account: style can be found in dropdown.less -->
-                    <li class="dropdown user user-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="../img/user2-160x160.jpg" class="user-image" alt="User Image">
-                            <span class="hidden-xs">张猿猿</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <!-- User image -->
-                            <li class="user-header">
-                                <img src="../img/user2-160x160.jpg" class="img-circle" alt="User Image">
-
-                                <p>
-                                    张猿猿 - 数据管理员
-                                    <small>最后登录 11:20AM</small>
-                                </p>
-                            </li>
-                            <!-- Menu Body 
-                    <li class="user-body">
-                        <div class="row">
-                            <div class="col-xs-4 text-center">
-                                <a href="#">Followers</a>
-                            </div>
-                            <div class="col-xs-4 text-center">
-                                <a href="#">Sales</a>
-                            </div>
-                            <div class="col-xs-4 text-center">
-                                <a href="#">Friends</a>
-                            </div>
-                        </div>
-                    </li>-->
-                            <!-- Menu Footer-->
-                            <li class="user-footer">
-                                <div class="pull-left">
-                                    <a href="#" class="btn btn-default btn-flat">修改密码</a>
-                                </div>
-                                <div class="pull-right">
-                                    <a href="#" class="btn btn-default btn-flat">注销</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <jsp:include page="header.jsp"/>
     <!-- 页面头部 /-->
 
     <!-- 导航侧栏 -->
-    <aside class="main-sidebar">
-        <!-- sidebar: style can be found in sidebar.less -->
-        <section class="sidebar">
-            <!-- Sidebar user panel -->
-            <div class="user-panel">
-                <div class="pull-left image">
-                    <img src="../img/user2-160x160.jpg" class="img-circle" alt="User Image">
-                </div>
-                <div class="pull-left info">
-                    <p>张猿猿</p>
-                    <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
-                </div>
-            </div>
-            <!-- search form -->
-            <!--<form action="#" method="get" class="sidebar-form">
-        <div class="input-group">
-            <input type="text" name="q" class="form-control" placeholder="搜索...">
-            <span class="input-group-btn">
-            <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-            </button>
-          </span>
-        </div>
-    </form>-->
-            <!-- /.search form -->
-
-
-            <!-- sidebar menu: : style can be found in sidebar.less -->
-            <ul class="sidebar-menu">
-                <li class="header">菜单</li>
-
-                <li id="admin-index"><a href="all-admin-index.html"><i class="fa fa-dashboard"></i> <span>首页</span></a></li>
-
-                <!-- 菜单 -->
-
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-folder"></i> <span>基础数据</span>
-                        <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li id="admin-login">
-                            <a href="/product/findAll.do">
-                                <i class="fa fa-circle-o"></i> 产品管理
-                            </a>
-                        </li>
-                        <li>
-                            <a href="all-admin-login.html">
-                                <i class="fa fa-circle-o"></i> 订单管理
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
-                <!-- 菜单 /-->
-
-            </ul>
-        </section>
-        <!-- /.sidebar -->
-    </aside>
+    <jsp:include page="aside.jsp"/>
     <!-- 导航侧栏 /-->
 
     <!-- 内容区域 -->
@@ -473,78 +149,79 @@
         </section>
         <!-- 内容头部 /-->
 
-        <!-- 正文区域 -->
-        <section class="content">
+        <form action="/product/save.do" method="post">
+            <!-- 正文区域 -->
+            <section class="content">
 
-            <!--订单信息-->
-            <div class="panel panel-default">
-                <div class="panel-heading">订单信息</div>
-                <div class="row data-type">
+                <!--订单信息-->
+                <div class="panel panel-default">
+                    <div class="panel-heading">产品信息</div>
+                    <div class="row data-type">
 
-                    <div class="col-md-2 title">订单编号</div>
-                    <div class="col-md-4 data">
-                        <input type="text" class="form-control" placeholder="订单编号" value="">
-                    </div>
-
-                    <div class="col-md-2 title">下单时间</div>
-                    <div class="col-md-4 data">
-                        <div class="input-group date">
-                            <div class="input-group-addon">
-                                <i class="fa fa-calendar"></i>
-                            </div>
-                            <input type="text" class="form-control pull-right" id="datepicker-a3">
+                        <div class="col-md-2 title">产品编号</div>
+                        <div class="col-md-4 data">
+                            <input type="text" class="form-control" placeholder="产品编号" value="" name="productNum">
                         </div>
-                    </div>
-                    <div class="col-md-2 title">路线名称</div>
-                    <div class="col-md-4 data">
-                        <input type="text" class="form-control" placeholder="路线名称" value="">
-                    </div>
 
-                    <div class="col-md-2 title">出发城市</div>
-                    <div class="col-md-4 data">
-                        <select class="form-control select2" style="width: 100%;">
-                            <option value="" selected="selected">Alabama</option>
-                            <option value="">Alaska</option>
-                            <option value="">California</option>
-                            <option value="">Delaware</option>
-                            <option value="">Tennessee</option>
-                            <option value="">Texas</option>
-                            <option value="">Washington</option>
-                        </select>
-                    </div>
-
-                    <div class="col-md-2 title">出发时间</div>
-                    <div class="col-md-4 data">
-                        <div class="input-group date">
-                            <div class="input-group-addon">
-                                <i class="fa fa-calendar"></i>
-                            </div>
-                            <input type="text" class="form-control pull-right" id="datepicker-a6">
+                        <div class="col-md-2 title">产品名称</div>
+                        <div class="col-md-4 data">
+                            <input type="text" class="form-control" placeholder="产品名称" value="" name="productName">
                         </div>
-                    </div>
-                    <div class="col-md-2 title">出游人数</div>
-                    <div class="col-md-4 data">
-                        <input type="text" class="form-control" placeholder="出游人数" value="">
-                    </div>
 
-                    <div class="col-md-2 title rowHeight2x">其他信息</div>
-                    <div class="col-md-10 data rowHeight2x">
-                        <textarea class="form-control" rows="3" placeholder="其他信息"></textarea>
-                    </div>
+                        <div class="col-md-2 title">出发时间</div>
+                        <div class="col-md-4 data">
+                            <div class="input-group date">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <input type="text" class="form-control pull-right" id="datepicker-a3" name="departureTime">
+                            </div>
+                        </div>
 
+                        <div class="col-md-2 title">出发城市</div>
+                        <div class="col-md-4 data">
+                            <select class="form-control select2" style="width: 100%;" name="cityName">
+                                <option value="北京" selected="selected">北京</option>
+                                <option value="上海">上海</option>
+                                <option value="广州">广州</option>
+                                <option value="深圳">深圳</option>
+                                <option value="天津">天津</option>
+                                <option value="重庆">重庆</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-2 title">产品价格</div>
+                        <div class="col-md-4 data">
+                            <input type="text" class="form-control" placeholder="产品价格" value="" name="productPrice">
+                        </div>
+
+                        <div class="col-md-2 title">产品状态</div>
+                        <div class="col-md-4 data">
+                            <select class="form-control select2" style="width: 100%;" name="productStatus">
+                                <option value="1" selected="selected">开启</option>
+                                <option value="0">关闭</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-2 title rowHeight2x">其他信息</div>
+                        <div class="col-md-10 data rowHeight2x">
+                            <textarea class="form-control" rows="3" placeholder="其他信息" name="productDesc"></textarea>
+                        </div>
+
+                    </div>
                 </div>
-            </div>
-            <!--订单信息/-->
+                <!--订单信息/-->
 
-            <!--工具栏-->
-            <div class="box-tools text-center">
-                <button type="button" class="btn bg-maroon">保存</button>
-                <button type="button" class="btn bg-default" onclick="history.back(-1);">返回</button>
-            </div>
-            <!--工具栏/-->
+                <!--工具栏-->
+                <div class="box-tools text-center">
+                    <button type="submit" class="btn bg-maroon">保存</button>
+                    <button type="button" class="btn bg-default" onclick="history.back(-1);">返回</button>
+                </div>
+                <!--工具栏/-->
 
-        </section>
-        <!-- 正文区域 /-->
+            </section>
+            <!-- 正文区域 /-->
+        </form>
 
     </div>
     <!-- 内容区域 /-->
@@ -607,6 +284,28 @@
 <script src="${pageContext.request.contextPath}/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.js"></script>
 <script src="${pageContext.request.contextPath}/plugins/bootstrap-datetimepicker/locales/bootstrap-datetimepicker.zh-CN.js"></script>
 <script>
+    // $.fn.datepicker.dates['zh-CN'] = {
+    //     days: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"],
+    //     daysShort: ["周日", "周一", "周二", "周三", "周四", "周五", "周六", "周日"],
+    //     daysMin:  ["日", "一", "二", "三", "四", "五", "六", "日"],
+    //     months: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+    //     monthsShort: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+    //     today: "今日",
+    //     format: "yyyy年mm月dd日",
+    //     weekStart: 1
+    // };
+
+    $.fn.datetimepicker.dates['zh-CN'] = {
+        days: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"],
+        daysShort: ["周日", "周一", "周二", "周三", "周四", "周五", "周六", "周日"],
+        daysMin:  ["日", "一", "二", "三", "四", "五", "六", "日"],
+        months: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+        monthsShort: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+        today: "今天",
+        suffix: [],
+        meridiem: ["上午", "下午"]
+    };
+
     $(document).ready(function() {
         // 选择框
         $(".select2").select2();
@@ -629,7 +328,7 @@
 
 
     $(document).ready(function() {
-        $('#datepicker-a3').datepicker({
+        $('#datepicker-a3').datetimepicker({
             autoclose: true,
             language: 'zh-CN'
         });

@@ -29,7 +29,7 @@
         <jsp.version>2.2</jsp.version>
         <jstl.version>1.2</jstl.version>
         <mybatis.spring.version>2.0.2</mybatis.spring.version>
-        <c3p0.version>0.9.1.2</c3p0.version>
+        <c3p0.version>0.9.5.3</c3p0.version>
         <pagehelper.version>5.1.9</pagehelper.version>
         <jsr250-api.version>1.0</jsr250-api.version>
         <mysql.version>5.1.47</mysql.version>
@@ -139,7 +139,7 @@
         <dependency>
             <groupId>com.mchange</groupId>
             <artifactId>c3p0</artifactId>
-            <version>0.9.5.3</version>
+            <version>${c3p0.version}</version>
         </dependency>
         <dependency>
             <groupId>com.github.pagehelper</groupId>
@@ -170,6 +170,11 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc14</artifactId>
+            <version>${oracle.version}</version>
         </dependency>
         <dependency>
             <groupId>javax.annotation</groupId>

@@ -11,6 +11,6 @@ public interface IProductDao {
     @Select("select * from product")
     List<Product> findAll() throws Exception;
 
-    @Insert("insert into PRODUCT (id, productnum, productname, cityname, departuretime, productprice, productdesc, productstatus) values (#{id}, #{productnum}, #{productname}, #{cityname}, #{departuretime}, #{productprice}, #{productdesc}, #{productstatus})")
-    void save() throws Exception;
+    @Insert("insert into product(productNum,productName,cityName,departureTime,productPrice,productDesc,productStatus) values(#{productNum},#{productName},#{cityName},#{departureTime},#{productPrice},#{productDesc},#{productStatus})")
+    void save(Product product);
 }
