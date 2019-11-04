@@ -21,15 +21,27 @@
     <!-- 配置连接池 -->
     <context:property-placeholder location="classpath:db.properties"/>
     <bean id="DataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
-        <property name="driverClass" value="${jdbc1.driver}"/>
-        <property name="jdbcUrl" value="${jdbc1.url}"/>
-        <property name="user" value="${jdbc1.username}"/>
-        <property name="password" value="${jdbc1.password}"/>
+        <property name="driverClass" value="${jdbc.driver}"/>
+        <property name="jdbcUrl" value="${jdbc.url}"/>
+        <property name="user" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
     </bean>
 
     <!-- 把交给IOC管理 SqlSessionFactory -->
     <bean class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="DataSource"/>
+        <property name="plugins">
+            <array>
+                <bean class="com.github.pagehelper.PageInterceptor">
+                    <property name="properties">
+                        <props>
+                            <prop key="helperDialect">mysql</prop>
+                            <prop key="reasonable">true</prop>
+                        </props>
+                    </property>
+                </bean>
+            </array>
+        </property>
     </bean>
 
     <!-- 扫描dao接口 -->
