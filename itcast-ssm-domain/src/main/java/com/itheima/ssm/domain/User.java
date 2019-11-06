@@ -1,14 +1,17 @@
 package com.itheima.ssm.domain;
 
-public class Users {
+import java.util.List;
+
+public class User {
 
     private Integer id;
-    private String email;
     private String username;
     private String password;
     private String phoneNum;
+    private String email;
     private Integer status;//状态0 未开启 1 开启
     private String statusStr;
+    private List<Role> roles;
 
     @Override
     public String toString() {
@@ -20,6 +23,7 @@ public class Users {
                 ", phoneNum='" + phoneNum + '\'' +
                 ", status=" + status +
                 ", statusStr='" + statusStr + '\'' +
+                ", roles=" + roles +
                 '}';
     }
 
@@ -85,7 +89,15 @@ public class Users {
         this.statusStr = statusStr;
     }
 
-    public Users(Integer id, String email, String username, String password, String phoneNum, Integer status, String statusStr) {
+    public List<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<Role> roles) {
+        this.roles = roles;
+    }
+
+    public User(Integer id, String email, String username, String password, String phoneNum, Integer status, String statusStr, List<Role> roles) {
         this.id = id;
         this.email = email;
         this.username = username;
@@ -93,8 +105,9 @@ public class Users {
         this.phoneNum = phoneNum;
         this.status = status;
         this.statusStr = statusStr;
+        this.roles = roles;
     }
 
-    public Users() {
+    public User() {
     }
 }

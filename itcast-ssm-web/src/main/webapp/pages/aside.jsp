@@ -55,6 +55,36 @@
                         </li>
                     </ul>
                 </li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-folder"></i> <span>系统管理</span>
+                        <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li id="system-setting">
+                            <a href="${pageContext.request.contextPath}/user/findAll.do">
+                                <i class="fa fa-circle-o"></i> 用户管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="${pageContext.request.contextPath}/role/findAll.do">
+                                <i class="fa fa-circle-o"></i> 角色管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="${pageContext.request.contextPath}/permission/findAll.do">
+                                <i class="fa fa-circle-o"></i> 资源权限管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="${pageContext.request.contextPath}/log/findAll.do">
+                                <i class="fa fa-circle-o"></i> 访问日志
+                            </a>
+                        </li>
+                    </ul>
+                </li>
 
                 <!-- 菜单 /-->
 
