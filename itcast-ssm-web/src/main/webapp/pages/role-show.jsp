@@ -139,13 +139,13 @@
         <!-- 内容头部 -->
         <section class="content-header">
             <h1>
-                用户管理
-                <small>用户表单</small>
+                角色管理
+                <small>角色表单</small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="all-admin-index.html"><i class="fa fa-dashboard"></i> 首页</a></li>
-                <li><a href="all-order-manage-list.html">用户管理</a></li>
-                <li class="active">用户表单</li>
+                <li><a href="all-order-manage-list.html">角色管理</a></li>
+                <li class="active">角色表单</li>
             </ol>
         </section>
         <!-- 内容头部 /-->
@@ -195,20 +195,14 @@
                                     </tr>
                                 </thead>
                                 <tr data-tt-id="0">
-                                    <td colspan="2">${user.username}</td>
+                                    <td colspan="2">${role.roleName}</td>
                                 </tr>
                                 <tbody>
-                                <c:forEach items="${user.roles}" var="role" varStatus="vs1">
+                                <c:forEach items="${role.permissions}" var="permission" varStatus="vs1">
                                     <tr data-tt-id="${vs1.index+1}" data-tt-parent-id="0">
-                                        <td>${role.roleName }</td>
-                                        <td>${role.roleDesc }</td>
+                                        <td>${permission.permissionName}</td>
+                                        <td>${permission.url}</td>
                                     </tr>
-                                    <c:forEach items="${role.permissions}" var="permission" varStatus="vs2">
-                                        <tr data-tt-id="${vs1.index+1}-${vs2.index+1}" data-tt-parent-id="${vs1.index+1}">
-                                            <td>${permission.permissionName}</td>
-                                            <td>${permission.url}</td>
-                                        </tr>
-                                    </c:forEach>
                                 </c:forEach>
                                 </tbody>
                             </table>

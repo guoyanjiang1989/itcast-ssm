@@ -1,5 +1,6 @@
 package com.itheima.ssm.dao;
 
+import com.itheima.ssm.domain.Role;
 import com.itheima.ssm.domain.User;
 import org.apache.ibatis.annotations.*;
 
@@ -9,7 +10,7 @@ public interface IUserDao {
 
     @Select("select * from user where username = #{username}")
     @Results(
-            @Result(property = "roles",column = "id",javaType = java.util.List.class,many = @Many(select = "com.itheima.ssm.dao.IRoleDao.findById"))
+            @Result(property = "roles",column = "id",javaType = List.class,many = @Many(select = "com.itheima.ssm.dao.IRoleDao.findRoleByUserId"))
     )
     User findByUserName(String username);
 
@@ -20,6 +21,15 @@ public interface IUserDao {
     void save(User user) throws Exception;
 
     @Select("select * from user where id = #{id}")
+    @Results({
+            @Result(id = true,property = "id",column = "id"),
+            @Result(property = "roles",column = "id",javaType = List.class,many = @Many(select = "com.itheima.ssm.dao.IRoleDao.findRoleByUserId"))
+    })
     User findById(Integer id) throws Exception;
 
+    @Select("select * from role where id not in (select roleID from user_role where userID = #{id})")
+    List<Role> findOtherRoles(Integer id) throws Exception;
+
+    @Insert("insert into user_role (userID,roleID) values (#{userID},#{roleID})")
+    void addRolesToUser(@Param("userID") Integer userID, @Param("roleID") Integer roleID) throws Exception;
 }

@@ -209,7 +209,7 @@
                                 <td>${users.statusStr}</td>
                                 <td class="text-center">
                                     <button type="button" class="btn bg-olive btn-xs" onclick='location.href="${pageContext.request.contextPath}/user/findById.do?id=${users.id}"'>详情</button>
-                                    <button type="button" class="btn bg-olive btn-xs" onclick='location.href="all-order-manage-edit.html"'>编辑</button>
+                                    <button type="button" class="btn bg-olive btn-xs" onclick='location.href="${pageContext.request.contextPath}/user/findUserByIdAndAllRoles.do?id=${users.id}"'>添加角色</button>
                                 </td>
                             </tr>
                             </c:forEach>

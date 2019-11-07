@@ -1,5 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
 
@@ -139,123 +138,50 @@
         <!-- 内容头部 -->
         <section class="content-header">
             <h1>
-                用户管理
-                <small>用户表单</small>
+                权限管理
+                <small>权限表单</small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="all-admin-index.html"><i class="fa fa-dashboard"></i> 首页</a></li>
-                <li><a href="all-order-manage-list.html">用户管理</a></li>
-                <li class="active">用户表单</li>
+                <li><a href="all-order-manage-list.html">权限管理</a></li>
+                <li class="active">权限表单</li>
             </ol>
         </section>
         <!-- 内容头部 /-->
 
-        <!-- 正文区域 -->
-        <section class="content"> <!-- .box-body -->
-            <div class="box box-primary">
-                <div class="box-header with-border">
-                    <h3 class="box-title">列表</h3>
-                </div>
+        <form action="${pageContext.request.contextPath}/permission/save.do" method="post">
+            <!-- 正文区域 -->
+            <section class="content">
 
-                <div class="box-body">
+                <!--订单信息-->
+                <div class="panel panel-default">
+                    <div class="panel-heading">权限信息</div>
+                    <div class="row data-type">
 
-                    <!-- 数据表格 -->
-                    <div class="table-box">
-
-                        <!--工具栏-->
-                        <div class="pull-left">
-                            <div class="form-group form-inline">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-default" title="新建">
-                                        <i class="fa fa-file-o"></i> 新建
-                                    </button>
-
-                                    <button type="button" class="btn btn-default" title="刷新">
-                                        <i class="fa fa-refresh"></i> 刷新
-                                    </button>
-                                </div>
-                            </div>
+                        <div class="col-md-2 title">权限名称</div>
+                        <div class="col-md-4 data">
+                            <input type="text" class="form-control" placeholder="权限名称" value="" name="permissionName">
                         </div>
-                        <div class="box-tools pull-right">
-                            <div class="has-feedback">
-                                <input type="text" class="form-control input-sm"
-                                       placeholder="搜索"> <span
-                                    class="glyphicon glyphicon-search form-control-feedback"></span>
-                            </div>
-                        </div>
-                        <!--工具栏/-->
 
-                        <!--数据列表-->
-                        <div class="tab-pane" id="tab-treetable">
-                            <table id="collapse-table" class="table table-bordered table-hover dataTable">
-                                <thead>
-                                    <tr>
-                                        <th>名称</th>
-                                        <th>描述</th>
-                                    </tr>
-                                </thead>
-                                <tr data-tt-id="0">
-                                    <td colspan="2">${user.username}</td>
-                                </tr>
-                                <tbody>
-                                <c:forEach items="${user.roles}" var="role" varStatus="vs1">
-                                    <tr data-tt-id="${vs1.index+1}" data-tt-parent-id="0">
-                                        <td>${role.roleName }</td>
-                                        <td>${role.roleDesc }</td>
-                                    </tr>
-                                    <c:forEach items="${role.permissions}" var="permission" varStatus="vs2">
-                                        <tr data-tt-id="${vs1.index+1}-${vs2.index+1}" data-tt-parent-id="${vs1.index+1}">
-                                            <td>${permission.permissionName}</td>
-                                            <td>${permission.url}</td>
-                                        </tr>
-                                    </c:forEach>
-                                </c:forEach>
-                                </tbody>
-                            </table>
+                        <div class="col-md-2 title">URL</div>
+                        <div class="col-md-4 data">
+                            <input type="text" class="form-control" placeholder="URL" value="" name="url">
                         </div>
-                        <!--数据列表/-->
 
                     </div>
-                    <!-- 数据表格 /-->
-
                 </div>
-                <!-- /.box-body -->
+                <!--订单信息/-->
 
-                <!-- .box-footer-->
-                <div class="box-footer">
-                    <div class="pull-left">
-                        <div class="form-group form-inline">
-                            总共2 页，共14 条数据。 每页 <select class="form-control">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select> 条
-                        </div>
-                    </div>
-
-                    <div class="box-tools pull-right">
-                        <ul class="pagination">
-                            <li><a href="#" aria-label="Previous">首页</a></li>
-                            <li><a href="#">上一页</a></li>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li><a href="#">下一页</a></li>
-                            <li><a href="#" aria-label="Next">尾页</a></li>
-                        </ul>
-                    </div>
-
+                <!--工具栏-->
+                <div class="box-tools text-center">
+                    <button type="submit" class="btn bg-maroon">保存</button>
+                    <button type="button" class="btn bg-default" onclick="history.back(-1);">返回</button>
                 </div>
-                <!-- /.box-footer-->
+                <!--工具栏/-->
 
-            </div>
-
-        </section>
-        <!-- 正文区域 /-->
+            </section>
+            <!-- 正文区域 /-->
+        </form>
 
     </div>
     <!-- 内容区域 /-->
@@ -318,11 +244,29 @@
 <script src="${pageContext.request.contextPath}/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.js"></script>
 <script src="${pageContext.request.contextPath}/plugins/bootstrap-datetimepicker/locales/bootstrap-datetimepicker.zh-CN.js"></script>
 <script>
+    // $.fn.datepicker.dates['zh-CN'] = {
+    //     days: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"],
+    //     daysShort: ["周日", "周一", "周二", "周三", "周四", "周五", "周六", "周日"],
+    //     daysMin:  ["日", "一", "二", "三", "四", "五", "六", "日"],
+    //     months: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+    //     monthsShort: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+    //     today: "今日",
+    //     format: "yyyy年mm月dd日",
+    //     weekStart: 1
+    // };
+
+    $.fn.datetimepicker.dates['zh-CN'] = {
+        days: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"],
+        daysShort: ["周日", "周一", "周二", "周三", "周四", "周五", "周六", "周日"],
+        daysMin:  ["日", "一", "二", "三", "四", "五", "六", "日"],
+        months: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+        monthsShort: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+        today: "今天",
+        suffix: [],
+        meridiem: ["上午", "下午"]
+    };
+
     $(document).ready(function() {
-        /*table tree*/
-        $("#collapse-table").treetable({
-            expandable: true
-        });
         // 选择框
         $(".select2").select2();
 
@@ -344,8 +288,24 @@
 
 
     $(document).ready(function() {
+        $('#datepicker-a3').datetimepicker({
+            autoclose: true,
+            language: 'zh-CN'
+        });
+    });
+
+
+    $(document).ready(function() {
+        $('#datepicker-a6').datepicker({
+            autoclose: true,
+            language: 'zh-CN'
+        });
+    });
+
+
+    $(document).ready(function() {
         // 激活导航位置
-        setSidebarActive("admin-index");
+        setSidebarActive("order-manage");
     });
 </script>
 </body>
