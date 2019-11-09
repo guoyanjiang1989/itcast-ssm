@@ -79,7 +79,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="${pageContext.request.contextPath}/log/findAll.do">
+                            <a href="${pageContext.request.contextPath}/syslog/findAll.do">
                                 <i class="fa fa-circle-o"></i> 访问日志
                             </a>
                         </li>

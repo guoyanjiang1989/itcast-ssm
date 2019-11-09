@@ -2,13 +2,20 @@
 <project version="4">
   <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8" addBOMForNewFiles="with BOM">
     <file url="file://$PROJECT_DIR$/itcast-ssm-dao/src/main/java/com/itheima/ssm/dao/IPermissionDao.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/itcast-ssm-dao/src/main/java/com/itheima/ssm/dao/ISyslogDao.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/itcast-ssm-domain/src/main/java/com/itheima/ssm/domain/Syslog.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/itcast-ssm-service/src/main/java/com/itheima/ssm/service/IPermissionService.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/itcast-ssm-service/src/main/java/com/itheima/ssm/service/IRoleService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/itcast-ssm-service/src/main/java/com/itheima/ssm/service/ISyslogService.java" charset="ISO-8859-1" />
     <file url="file://$PROJECT_DIR$/itcast-ssm-service/src/main/java/com/itheima/ssm/service/PermissionServiceImpl.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/itcast-ssm-service/src/main/java/com/itheima/ssm/service/RoleServiceImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/itcast-ssm-service/src/main/java/com/itheima/ssm/service/SyslogServiceImpl.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/itcast-ssm-utils/src/main/java/com/itheima/ssm/utils/BCryptPasswordEncoderUtils.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/itcast-ssm-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/itcast-ssm-web/src/main/java/com/itheima/ssm/controller/LogAop.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/itcast-ssm-web/src/main/java/com/itheima/ssm/controller/PermissionController.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/itcast-ssm-web/src/main/java/com/itheima/ssm/controller/RoleController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/itcast-ssm-web/src/main/java/com/itheima/ssm/controller/SyslogController.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/itcast-ssm-web/src/main/java/com/itheima/ssm/controller/UserController.java" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
